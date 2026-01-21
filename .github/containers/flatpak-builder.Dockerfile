@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
     curl \
     git \
     # Required for some flatpak operations
-    dbus-daemon-proxy \
+    xdg-dbus-proxy \
     && rm -rf /var/lib/apt/lists/*
 
 # 2. Add Flathub repository (System-wide)
