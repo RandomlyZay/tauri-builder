@@ -27,12 +27,12 @@ ENV RUSTUP_HOME=/usr/local/rustup \
 
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --no-modify-path --profile minimal
 
-# 3. Install Node.js 20
-RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
+# 3. Install Node.js 24
+RUN curl -fsSL https://deb.nodesource.com/setup_24.x | bash - && \
     apt-get install -y nodejs && \
     rm -rf /var/lib/apt/lists/*
 
-# 4. Install pnpm (Global)
+# 4. Install pnpm
 RUN npm install -g pnpm
 
 # 5. Pre-create generic cache directories to ensure permissions
