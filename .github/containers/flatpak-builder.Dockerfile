@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y \
     flatpak \
     flatpak-builder \
-    appstream \
+    appstream-compose \
     elfutils \
     curl \
     git \
