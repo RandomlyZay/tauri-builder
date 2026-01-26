@@ -1,5 +1,6 @@
-# Base image matches the GitHub Actions runner version
-FROM ubuntu:22.04
+# This is required because 22.04 does not package 'appstream-compose',
+# which is now required by flatpak-builder.
+FROM ubuntu:24.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
