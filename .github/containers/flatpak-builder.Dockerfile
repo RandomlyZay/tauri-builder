@@ -9,12 +9,13 @@ RUN apt-get update && apt-get install -y \
     flatpak-builder \
     elfutils \
     appstream \
+    appstream-compose \
     curl \
     git \
     xdg-dbus-proxy \
     && rm -rf /var/lib/apt/lists/*
 
-# 2. Add Flathub repository (System-wide)
+# 2. Add Flathub repository
 RUN flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # 3. Install Node.js 24
