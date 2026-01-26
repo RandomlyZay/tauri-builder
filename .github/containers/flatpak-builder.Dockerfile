@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
     flatpak \
     flatpak-builder \
     elfutils \
+    appstream \
     curl \
     git \
     xdg-dbus-proxy \
